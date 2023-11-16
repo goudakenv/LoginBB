@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>掲示板</h1>
-    <form action="post" method="post">
+    <form action="" method="post">
         ユーザー名: <input type="text" name="username" required><br>
         メッセージ: <textarea name="message" rows="4" cols="50" required></textarea><br>
         <input type="submit" value="投稿">

@@ -30,6 +30,9 @@ public class PostServlet extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+    	//Post送信は文字化けする。文字化け対策は必須
+    			request.setCharacterEncoding("UTF-8");
+    	
         // 以下は変更なし
         String username = request.getParameter("username");
         String message = request.getParameter("message");

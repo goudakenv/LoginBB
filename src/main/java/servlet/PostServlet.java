@@ -18,7 +18,7 @@ public class PostServlet extends HttpServlet {
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/itemList.jsp").forward(request, response);
     }
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -31,9 +31,8 @@ public class PostServlet extends HttpServlet {
         post.setMessage(message);
 
         PostDAO postDao = new PostDAO();
-        System.out.println(postDao);
         postDao.addPost(post);
 
-        request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/itemList.jsp").forward(request, response);
     }
 }

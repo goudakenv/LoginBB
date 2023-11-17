@@ -38,8 +38,7 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String loginId = request.getParameter("id");
 		String loginPass = request.getParameter("pass");
-		System.out.println(loginId);
-		System.out.println(loginPass);
+
 		
 		//バリデーション
 		//Daoを使いID、PASSをチェック
@@ -58,7 +57,7 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("user", user);
 		
-		response.sendRedirect(request.getContextPath() + "/item/list");
+		response.sendRedirect(request.getContextPath() + "/LoginBB/item/post");
 				
 	}
 

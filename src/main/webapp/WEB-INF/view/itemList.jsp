@@ -1,5 +1,7 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="domain.Post" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +17,27 @@
     </form>
     <hr>
     <h2>投稿一覧</h2>
+    
+<%
+    // リクエスト属性から投稿データのリストを取得
+    Object attribute = request.getAttribute("postList");
+
+    // もしも attribute が List<Post> であることが確定している場合
+    if (attribute instanceof List<?>) {
+        List<Post> postList = (List<Post>) attribute;
+
+        // 投稿データを表示
+        for (Post post : postList) {
+%>
+    <p>ユーザー名: <%= post.getUsername() %></p>
+    <p>メッセージ: <%= post.getMessage() %></p>
+    <hr>
+<%
+    }    
+} else {
+    // もしも attribute が List<Post> でない場合のエラーハンドリングなど
+}
+%>
     
 </body>
 </html>

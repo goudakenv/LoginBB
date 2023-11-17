@@ -3,6 +3,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="domain.Post"%>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +19,9 @@
 		<br> <input type="submit" value="投稿">
 	</form>
 	<hr>
+		<form action="/LoginBB/login" method="post">
+		<input type="submit" value="ログアウト" />
+	</form>
 	<h2>投稿一覧</h2>
 
 

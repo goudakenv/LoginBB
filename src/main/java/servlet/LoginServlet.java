@@ -1,6 +1,5 @@
 package servlet;
 
-
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -38,7 +37,8 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String loginId = request.getParameter("id");
 		String loginPass = request.getParameter("pass");
-
+		System.out.println(loginId);
+		System.out.println(loginPass);
 		
 		//バリデーション
 		//Daoを使いID、PASSをチェック
@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 		session.setAttribute("user", user);
 		
 		response.sendRedirect(request.getContextPath() + "/LoginBB/item/post");
-				
+
 	}
 
 }

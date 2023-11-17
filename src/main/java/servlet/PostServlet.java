@@ -41,7 +41,7 @@ public class PostServlet extends HttpServlet {
         PostDAO postDao = new PostDAO();
         postDao.addPost(post);
 
-        // itemList.jspにフォワード
-        request.getRequestDispatcher("/WEB-INF/view/itemList.jsp").forward(request, response);
+        // doGetメソッドを呼び出して投稿一覧を再取得
+        doGet(request, response);
     }
 }

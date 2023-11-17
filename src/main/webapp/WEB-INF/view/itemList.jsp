@@ -17,6 +17,8 @@
     </form>
     <hr>
     <h2>投稿一覧</h2>
+        
+    
     
 <%
     // リクエスト属性から投稿データのリストを取得
@@ -29,7 +31,7 @@
         // 投稿データを表示
         for (Post post : postList) {
 %>
-    <p>ユーザー名: <%= post.getUsername() %></p>
+<p>番号: <%= post.getId() %></p>
     <p>メッセージ: <%= post.getMessage() %></p>
     <hr>
 <%

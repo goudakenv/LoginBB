@@ -33,7 +33,7 @@ public class ItemServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.invalidate();
 		response
-		.sendRedirect(request.getContextPath() + "/login");
+		.sendRedirect(request.getContextPath() + "/LoginBB/login");
 	}
 	
 	

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.PostDAO;
 import domain.Post;
 
-@WebServlet("/LoginBB/item/post")
+@WebServlet("/item/post")
 public class PostServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

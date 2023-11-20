@@ -19,10 +19,14 @@
 		<textarea name="message" rows="4" cols="50" required></textarea>
 		<br> <input type="submit" value="投稿">
 	</form>
+	
 	<hr>
-		<form action="/LoginBB/login" method="post">
+	
+	${user.loginId }
+		<form action="/LoginBB/item/out" method="post">
 		<input type="submit" value="ログアウト" />
 	</form>
+	
 	<h2>投稿一覧</h2>
 
 

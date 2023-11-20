@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class ItemServlet
  */
-@WebServlet("/item/list")
+@WebServlet("/item/out")
 public class ItemServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -33,7 +33,7 @@ public class ItemServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.invalidate();
 		response
-		.sendRedirect(request.getContextPath() + "/LoginBB/login");
+		.sendRedirect(request.getContextPath() + "/login");
 	}
 	
 	

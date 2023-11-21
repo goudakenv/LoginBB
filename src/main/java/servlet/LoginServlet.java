@@ -13,7 +13,6 @@ import dao.DaoFactory;
 import dao.UserDao;
 import domain.User;
 
-
 /**
  * Servlet implementation class LoginServlet
  */
@@ -22,20 +21,28 @@ public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse 
+	 * response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		request
 		.getRequestDispatcher("/WEB-INF/view/login.jsp")
 		.forward(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *  response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		//文字化け防止
 		request.setCharacterEncoding("UTF-8");
+		
 		String loginId = request.getParameter("id");
 		String loginPass = request.getParameter("pass");
 		System.out.println(loginId);
@@ -58,8 +65,8 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("user", user);
 		
-		response.sendRedirect(request.getContextPath() + "/item/list");
-				
+		response.sendRedirect(request.getContextPath() + "/item/post");
+
 	}
 
 }

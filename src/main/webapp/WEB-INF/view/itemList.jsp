@@ -23,7 +23,7 @@
 	<hr>
 	
 	${user.loginId }
-		<form action="/LoginBB/item/out" method="post">
+		<form action="/jdbp10-2/item/out" method="post">
 		<input type="submit" value="ログアウト" />
 	</form>
 	
